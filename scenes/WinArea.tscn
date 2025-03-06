@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqhb6voqhothd"]
+
+[ext_resource type="Script" path="res://scenes/win_area.gd" id="1_0end2"]
+[ext_resource type="Texture2D" uid="uid://chgqimvh7rdh6" path="res://assets/Familiar Looking Rocket.png" id="2_b5uk3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2vl3"]
+size = Vector2(230, 474)
+
+[node name="WinArea" type="Area2D"]
+script = ExtResource("1_0end2")
+
+[node name="FamiliarLookingRocket" type="Sprite2D" parent="."]
+position = Vector2(232, 245)
+texture = ExtResource("2_b5uk3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(230, 246)
+shape = SubResource("RectangleShape2D_f2vl3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
