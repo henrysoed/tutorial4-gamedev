@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c827yoaqw35ry"]
+
+[ext_resource type="Texture2D" uid="uid://brwaluaj2oqfl" path="res://assets/kenney_platformerpack/PNG/Enemies/wormGreen.png" id="1_lpf2r"]
+[ext_resource type="PackedScene" uid="uid://crhu44hty15fq" path="res://scenes/LoseArea.tscn" id="2_6fu0y"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0x5va"]
+radius = 17.0
+height = 116.0
+
+[node name="falling_bee" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.57225
+texture = ExtResource("1_lpf2r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(44, 1)
+shape = SubResource("CapsuleShape2D_0x5va")
+disabled = true
+
+[node name="Area2D" parent="." instance=ExtResource("2_6fu0y")]
+position = Vector2(27, -43)
+scale = Vector2(0.00682956, 1.20153)

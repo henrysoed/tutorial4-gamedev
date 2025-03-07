@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var sceneName: String = "WinScreen"
+@export var sceneName: String = "NewLevel"
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.get_name() == "Player":
