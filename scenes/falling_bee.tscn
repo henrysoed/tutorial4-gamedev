@@ -14,7 +14,7 @@ rotation = -1.57225
 texture = ExtResource("1_lpf2r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(44, 1)
+position = Vector2(50, 1)
 shape = SubResource("CapsuleShape2D_0x5va")
 disabled = true
 
