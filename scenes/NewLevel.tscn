@@ -64,7 +64,7 @@ tile_set = SubResource("TileSet_re2ip")
 [node name="WinArea" parent="." instance=ExtResource("3_eqyxn")]
 position = Vector2(1910, -604)
 script = ExtResource("4_3utdd")
-sceneName = "WinScreen"
+scene_name = "Level1"
 
 [node name="Area2D" parent="." instance=ExtResource("5_s57ke")]
 position = Vector2(-485, 278)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://yqmk0vpvnyxr"]
+[gd_scene load_steps=10 format=4 uid="uid://yqmk0vpvnyxr"]
 
 [ext_resource type="PackedScene" uid="uid://bc2fujtl13g10" path="res://scenes/Player.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://76hi8rt1miuo" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_grass.png" id="2_tq04c"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cqhb6voqhothd" path="res://scenes/WinArea.tscn" id="4_jlrp6"]
 [ext_resource type="PackedScene" uid="uid://f8rrpc3kncsw" path="res://scenes/falling_fish.tscn" id="5_jqley"]
 [ext_resource type="Script" path="res://scenes/spawner.gd" id="6_fdhta"]
+[ext_resource type="PackedScene" uid="uid://dwjny6w6e0wvq" path="res://scenes/LifeCounter.tscn" id="7_sfp7x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m3ikg"]
 texture = ExtResource("2_tq04c")
@@ -74,3 +75,7 @@ position = Vector2(-1432, 911)
 position = Vector2(318, -263)
 script = ExtResource("6_fdhta")
 obstacle = ExtResource("5_jqley")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource("7_sfp7x")]

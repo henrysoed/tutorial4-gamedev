@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://delu34nhahky8"]
+
+[node name="Node2D" type="MarginContainer"]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
