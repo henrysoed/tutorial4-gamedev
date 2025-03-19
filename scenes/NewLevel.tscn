@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://bc2fujtl13g10" path="res://scenes/Player.tscn" id="1_dhxsv"]
 [ext_resource type="Texture2D" uid="uid://waka2vnagn14" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_sand.png" id="2_gto55"]
 [ext_resource type="PackedScene" uid="uid://cqhb6voqhothd" path="res://scenes/WinArea.tscn" id="3_eqyxn"]
-[ext_resource type="Script" path="res://scenes/lose_area.gd" id="4_3utdd"]
 [ext_resource type="PackedScene" uid="uid://crhu44hty15fq" path="res://scenes/LoseArea.tscn" id="5_s57ke"]
 [ext_resource type="Script" path="res://scenes/falling_bee.gd" id="6_5wu38"]
 [ext_resource type="PackedScene" uid="uid://c827yoaqw35ry" path="res://scenes/falling_bee.tscn" id="7_txa1t"]
+[ext_resource type="PackedScene" uid="uid://dwjny6w6e0wvq" path="res://scenes/LifeCounter.tscn" id="8_j23ya"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56blb"]
 texture = ExtResource("2_gto55")
@@ -61,15 +61,19 @@ sources/0 = SubResource("TileSetAtlasSource_56blb")
 tile_map_data = PackedByteArray("AAD//wEAAAAGAAEAAAAAAAEAAAAHAAEAAAABAAEAAAAIAAEAAAAEAAEAAAAEAAAAAAAFAAEAAAAAAAEAAAADAAEAAAADAAAAAAAHAAEAAAAGAAEAAAAIAAEAAAAHAAEAAAAJAAEAAAAHAAEAAAAKAAAAAAAFAAEAAAAKAAEAAAABAAAAAAALAAEAAAABAAAAAAALAAAAAAABAAAAAAALAP//AAAFAAEAAAAMAP//AAAHAAEAAAANAP//AAAHAAEAAAAOAP//AAAHAAEAAAAPAP//AAAHAAEAAAAQAP//AAAHAAEAAAARAP//AAAHAAEAAAAMAAAAAAABAAAAAAAMAAEAAAABAAAAAAANAAEAAAABAAAAAAAOAAEAAAABAAAAAAAPAAEAAAABAAAAAAAQAAEAAAABAAAAAAARAAEAAAABAAAAAAARAAAAAAABAAAAAAAQAAAAAAABAAAAAAAPAAAAAAABAAAAAAAOAAAAAAABAAAAAAANAAAAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_re2ip")
 
-[node name="WinArea" parent="." instance=ExtResource("3_eqyxn")]
-position = Vector2(1910, -604)
-script = ExtResource("4_3utdd")
-scene_name = "Level1"
-
 [node name="Area2D" parent="." instance=ExtResource("5_s57ke")]
 position = Vector2(-485, 278)
+
+[node name="WinArea" parent="." instance=ExtResource("3_eqyxn")]
+position = Vector2(1884, -608)
 
 [node name="SpawnBee" type="Node2D" parent="."]
 position = Vector2(221, -468)
 script = ExtResource("6_5wu38")
 obstacle = ExtResource("7_txa1t")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource("8_j23ya")]
+offset_right = 1.0
+offset_bottom = 23.0

@@ -1,3 +1,3 @@
 extends Node
 
-var lives = 2
+var lives = 3

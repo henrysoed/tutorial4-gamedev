@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://baqs23yyr70e6"]
+
+[ext_resource type="Script" path="res://stage_1.gd" id="1_1yeqs"]
+[ext_resource type="FontFile" uid="uid://b1e5t5kpxlwbp" path="res://assets/fonts/CC Wild Words Roman.ttf" id="1_c1wkj"]
+[ext_resource type="Script" path="res://stage_2.gd" id="2_bjpvq"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Stage 1" type="LinkButton" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_fonts/font = ExtResource("1_c1wkj")
+theme_override_font_sizes/font_size = 25
+text = "Stage 1"
+script = ExtResource("1_1yeqs")
+
+[node name="Stage 2" type="LinkButton" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.262745, 1, 1)
+theme_override_fonts/font = ExtResource("1_c1wkj")
+theme_override_font_sizes/font_size = 25
+text = "Stage 2"
+script = ExtResource("2_bjpvq")
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Stage 1" to="HBoxContainer/VBoxContainer/Stage 1" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Stage 2" to="HBoxContainer/VBoxContainer/Stage 2" method="_on_pressed"]

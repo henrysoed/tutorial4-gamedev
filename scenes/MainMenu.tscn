@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cb05nbmon7wll"]
+[gd_scene load_steps=5 format=3 uid="uid://cb05nbmon7wll"]
 
 [ext_resource type="FontFile" uid="uid://b1e5t5kpxlwbp" path="res://assets/fonts/CC Wild Words Roman.ttf" id="1_y8wam"]
 [ext_resource type="Script" path="res://scenes/new_game.gd" id="2_tmwhd"]
+[ext_resource type="Script" path="res://scenes/new_stage.gd" id="3_d836q"]
 [ext_resource type="Texture2D" uid="uid://c3j8bvdstx7br" path="res://assets/kenney_platformerpack/PNG/icon.png" id="3_iir2i"]
 
 [node name="MarginContainer" type="MarginContainer"]
@@ -37,6 +38,8 @@ scene_to_load = "Level1"
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "Stage Select"
+underline = 1
+script = ExtResource("3_d836q")
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
@@ -46,3 +49,4 @@ stretch_mode = 2
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/NewGame" to="HBoxContainer/VBoxContainer/NewGame" method="_on_New_Game_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/NewGame" to="HBoxContainer/VBoxContainer/NewGame" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/NewStage" to="HBoxContainer/VBoxContainer/NewStage" method="_on_pressed"]
