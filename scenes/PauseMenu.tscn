@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5f5o5xlatd7k"]
+
+[ext_resource type="Script" path="res://scenes/pause_menu.gd" id="1_42j8o"]
+[ext_resource type="FontFile" uid="uid://b1e5t5kpxlwbp" path="res://assets/fonts/CC Wild Words Roman.ttf" id="1_plksu"]
+[ext_resource type="Script" path="res://scenes/restart.gd" id="2_3wy5g"]
+[ext_resource type="Script" path="res://scenes/resume.gd" id="3_ghmpp"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_42j8o")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 306.0
+offset_top = 99.0
+offset_right = 769.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 70
+text = "Game Paused"
+
+[node name="Restart" type="LinkButton" parent="."]
+offset_left = 452.0
+offset_top = 267.0
+offset_right = 620.0
+offset_bottom = 307.0
+theme_override_fonts/font = ExtResource("1_plksu")
+text = "Restart to Level 1"
+underline = 1
+script = ExtResource("2_3wy5g")
+
+[node name="Resume" type="LinkButton" parent="."]
+offset_left = 482.0
+offset_top = 220.0
+offset_right = 589.0
+offset_bottom = 260.0
+theme_override_fonts/font = ExtResource("1_plksu")
+text = "Main Menu"
+underline = 1
+script = ExtResource("3_ghmpp")

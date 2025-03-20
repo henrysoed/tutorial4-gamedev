@@ -80,3 +80,5 @@ libraries = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

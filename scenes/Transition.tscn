@@ -1,21 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://dep5wb8gp3wyp"]
+[gd_scene load_steps=4 format=3 uid="uid://cyyrajbyjs5a0"]
 
-[ext_resource type="Script" path="res://scenes/transition.gd" id="1_ul77p"]
+[ext_resource type="Script" path="res://transisi.gd" id="1_2jnur"]
+[ext_resource type="FontFile" uid="uid://b1e5t5kpxlwbp" path="res://assets/fonts/CC Wild Words Roman.ttf" id="2_k1be2"]
+[ext_resource type="Texture2D" uid="uid://ck2tgpkc7dlj8" path="res://assets/receiving-cartoon-achievement-game-screen-600nw-1066201646.webp" id="2_vxdi1"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_ul77p")
+[node name="Transisi" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(620, 329)
+scale = Vector2(1.31174, 1.31174)
+texture = ExtResource("2_vxdi1")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="LinkButton" type="LinkButton" parent="."]
+offset_left = 412.0
+offset_top = 519.0
+offset_right = 824.0
+offset_bottom = 542.0
+theme_override_fonts/font = ExtResource("2_k1be2")
+theme_override_font_sizes/font_size = 25
+text = "Lanjut ke Level Selanjutnya"
+underline = 1
+script = ExtResource("1_2jnur")
+
+[connection signal="pressed" from="LinkButton" to="LinkButton" method="_on_pressed"]

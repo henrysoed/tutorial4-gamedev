@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b2rgobr3dltqq"]
 
-[ext_resource type="Texture2D" uid="uid://bi5p7hlw4wlhv" path="res://assets/dead.jpg" id="1"]
+[ext_resource type="Texture2D" uid="uid://bi5p7hlw4wlhv" path="res://assets/kenney_platformerpack/PNG/Ground/dead.jpg" id="1"]
 
 [node name="LoseScreen" type="Node2D"]
 

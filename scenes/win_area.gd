@@ -9,6 +9,6 @@ func _on_body_entered(body: Node2D) -> void:
 	var current_scene_name = current_scene_path.get_file().trim_suffix(".tscn")
 	if body.get_name() == "Player":
 		if current_scene_name == scene_name:
-			get_tree().change_scene_to_file(str("res://scenes/NewLevel.tscn"))
+			get_tree().change_scene_to_file(str("res://scenes/Transition.tscn"))
 		if current_scene_name == sceneName:
 			get_tree().change_scene_to_file(str("res://scenes/WinScreen.tscn"))	

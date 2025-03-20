@@ -41,3 +41,7 @@ func _process(_delta):
 	# Flip sprite berdasarkan arah gerakan
 	if velocity.x != 0:
 		$Sprite2D.flip_h = velocity.x < 0
+
+func _input(event):
+	if event.is_action_pressed("ui_pause"):
+		get_tree().change_scene_to_file("res://scenes/PauseMenu.tscn")
